@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+:root {
+  --icon1: #96a5a7;
+  --cubic: 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  --lg1: linear-gradient(to right, #415e52c2, #edf0ef);
+  --lg2: linear-gradient(to right, #2d99df66, #2d99df1a);
+  --lg3: linear-gradient(to right, #c2473f8c, #c2473f12);
+  --lg4: linear-gradient(to right, #3c245880, #3c245829);
+  --lg5: linear-gradient(to right, #00854ec7, #00854e4a);
+  --lg6: linear-gradient(to right, #2a155ab8, #2a155a30);
+  --lg7: linear-gradient(to right, #f3ff367d, #f3ff3614);
+  --shadow: 11px 11px 22px #333030,
+             -11px -11px 22px #454242;
+  --h1: #a8b5b3;
+  --p1: #cdd1d3;
+  --h2: #03247ca8;
+  --p2: #a7bce3;
+  --h3: #811e3487;
+  --p3: #a3926a78;
+  --h4: #301e429e;
+  --p4: #433644a1;
+  --h5: #03905abf;
+  --p5: #03905a40;
+  --h6: #300545a1;
+  --p6: #300545a1;
+  --h7: #878d20;
+  --p7: #878d206b;
+  --progress-bg1: #dfe3e6;
+  --progress-filled1: #c0d1d7;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+body {
+  overflow: hidden;
+  user-select: none;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--lg1);
+  font-family: 'Oxygen', sans-serif;
+  transition: var(--cubic);
+}
+ion-icon {
+  color: var(--icon1);
+  font-size: 1.5em;
+  margin: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+h, p, #current, #duration, ion-icon, #repeat {
+  transition: visibility var(--cubic);
+}
+h {
+ color: var(--h1); 
+ text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+p {
+  color: var(--p1);
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+#current, #duration {
+  font-size: 0.8em;
+}
+.wrapper {
+  height: 300px;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  background: #f1f1f1;
+}
+.album {
+  overflow: hidden;
+  height: 150px;
+  width: 400px;
+  border-radius: 15px 15px 0px 0px;
+  background-repat: no-repeat;
+  background-position: center;
+  background-size: center;
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/9/95/Origins_cover.png');
+  transition: .4s ease;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 400px;
+}
+.now-playing {
+  margin: 20px;
+  width: 350px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.progress-wrapper {
+  margin: 0 auto;
+  width: 300px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.progress-bar {
+  margin: 0 auto;
+  width: 250px;
+  height: 10px;
+  border-radius: 15px;
+  background: var(--progress-bg1);
+}
+#progress {
+  height: 10px;
+  border-radius: 15px;
+  width: 0px;
+  background: var(--progress-filled1);
+}
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  width: 250px;
+  margin: 0 auto;
+}
+.center {
+  justify-content: center;
+  width: 140px;
+}
